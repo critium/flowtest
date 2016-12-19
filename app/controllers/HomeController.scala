@@ -21,4 +21,12 @@ class HomeController @Inject() extends Controller {
   def index = Action { implicit request =>
     Ok(views.html.index())
   }
+
+  def getRates(
+    base:Option[String],
+    target:Option[String],
+    timestamp:Option[String]
+  ) = Action { implicit request =>
+    Ok("hi" + base + target + timestamp)
+  }
 }
