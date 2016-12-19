@@ -1,4 +1,4 @@
-package controllers
+package flow.controllers
 
 import flow.services._
 import flow.data._
@@ -18,16 +18,15 @@ import play.api.mvc._
 class HomeController @Inject() extends Controller {
 
   /**
-   * Create an Action to render an HTML page.
-   *
-   * The configuration in the `routes` file means that this method
-   * will be called when the application receives a `GET` request with
-   * a path of `/`.
+   * Returns the FixerResponse
+   * {
+   * "base"  : // the base currency
+   * "date"  : // the requested date of the request
+   * "rates" : [{
+   *    // the key value pair given the target currency and the conversion from the base currency
+   * }]
+   * }
    */
-  def index = Action { implicit request =>
-    Ok(views.html.index())
-  }
-
   def getRates(
     base:Option[String],
     target:Option[String],

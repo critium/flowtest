@@ -44,7 +44,6 @@ object FixerService {
   def callFixer(base:Option[String], target:Option[String], timestamp:Option[String]):FixerResponse = {
     val request:HttpRequest = Http(s"${rootURL}/${date(timestamp)}")
     val response:HttpResponse[String] = buildParams(request, base, target).asString
-
     val fixerResponse:FixerResponse = Json.parse(response.body).as[FixerResponse]
 
     //println("Y: " + response.body + " " + response.code + " " + fixerResponse)

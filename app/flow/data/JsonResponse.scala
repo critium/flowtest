@@ -5,6 +5,9 @@ import play.api.http._
 import play.api.libs.json._
 import play.api.libs.functional.syntax._
 
+/**
+ * Standard JSON Response object -- returns status and the payload is under the data object
+ */
 case class JsonResponse(code:Int, data:JsValue, ts:java.util.Date = new java.util.Date())
 
 object JsonResponse {
