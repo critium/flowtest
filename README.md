@@ -1,18 +1,20 @@
 # NOTES:
 
 Things todo:
-[x] Use case 1 - basic play app
-[x] Use case 1 - basic controller
-[x] Use case 1 - basic fixer http client
-[x] Use case 1 - basic response to use case 1
+- [x] Use case 1 - basic play app
+- [x] Use case 1 - basic controller
+- [x] Use case 1 - basic fixer http client
+- [x] Use case 1 - basic response to use case 1
 
-[x] Use case 2 - create timed actor
-[x] Use case 2 - create database for storage // wrapped around the axle here
-[x] Complete webhook
+- [x] Use case 2 - create timed actor
+- [x] Use case 2 - create database for storage // wrapped around the axle here
+- [x] Use case 2 - Complete webhook
 
-[ ] Cleanup - move controller
-[ ] Documentation/swagger
+- [x] Cleanup - move controller
 
+TODO:
+1. Complete the database.  I got wrapped around the axle trying to get scala slick working.
+2. Implement swagger for documentation.
 
 
 --------------------------------------
