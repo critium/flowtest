@@ -23,10 +23,16 @@ object JsonResponse {
     (JsPath \ "ts").write[String]
   )(jsonTpl _)
 
+  /**
+   * Define the content type for this object
+   */
   implicit def contentTypeOf_JsonResponse(implicit codec: Codec): ContentTypeOf[JsonResponse] = {
     ContentTypeOf[JsonResponse](Some(ContentTypes.JSON))
   }
 
+  /**
+   * create writable so we can write object directly to the Ok()
+   */
   implicit def writeableOf_JsonResponse(implicit codec: Codec): Writeable[JsonResponse] = {
     Writeable(jsval => akka.util.ByteString.fromString(Json.stringify(Json.toJson(jsval)), "UTF-8"))
   }

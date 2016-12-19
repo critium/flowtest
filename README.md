@@ -1,3 +1,22 @@
+# NOTES:
+
+Things todo:
+[x] Use case 1 - basic play app
+[x] Use case 1 - basic controller
+[x] Use case 1 - basic fixer http client
+[x] Use case 1 - basic response to use case 1
+
+[x] Use case 2 - create timed actor
+[x] Use case 2 - create database for storage // wrapped around the axle here
+[x] Complete webhook
+
+[ ] Cleanup - move controller
+[ ] Documentation/swagger
+
+
+
+--------------------------------------
+
 # Flow Currency Rates
 
 The Flow Commerce platform needs to consume and make available

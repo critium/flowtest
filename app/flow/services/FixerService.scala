@@ -32,6 +32,8 @@ object FixerService {
       case (None, Some(targetValue)) =>
         request
           .param(symbolsQ, targetValue)
+      case (None, None) =>
+        request
     }
   }
 
@@ -45,8 +47,12 @@ object FixerService {
 
     val fixerResponse:FixerResponse = Json.parse(response.body).as[FixerResponse]
 
-    println("Y: " + response.body + " " + response.code + " " + fixerResponse)
+    //println("Y: " + response.body + " " + response.code + " " + fixerResponse)
 
     fixerResponse
+  }
+
+  def getLatest:FixerResponse = {
+    callFixer(None, None, None)
   }
 }
