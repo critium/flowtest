@@ -1,5 +1,7 @@
 package controllers
 
+import flow.services._
+
 import javax.inject._
 import play.api._
 import play.api.mvc._
@@ -27,6 +29,7 @@ class HomeController @Inject() extends Controller {
     target:Option[String],
     timestamp:Option[String]
   ) = Action { implicit request =>
+    FixerService.callFixer(base, target, timestamp)
     Ok("hi" + base + target + timestamp)
   }
 }

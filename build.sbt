@@ -9,6 +9,9 @@ scalaVersion := "2.11.8"
 
 libraryDependencies += filters
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test
+libraryDependencies += "org.scalaj" %% "scalaj-http" % "2.3.0"
+libraryDependencies += "com.typesafe.play" %% "play-json" % "2.5.10"
+
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "flowtest.controllers._"
