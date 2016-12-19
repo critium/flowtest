@@ -12,9 +12,16 @@ Things todo:
 
 - [x] Cleanup - move controller
 
+To Run:
+specifically, if the port needs to be changed to 80 as given on use case 1, run
+> sudo sbt -Dhttp.port=80
+
+Otherwise, just run sbt
+> run
+
 TODO:
-1. Complete the database.  I got wrapped around the axle trying to get scala slick working.
-2. Implement swagger for documentation.
+* Complete the database.  I got wrapped around the axle trying to get scala slick working.
+* Implement swagger for documentation.
 
 
 --------------------------------------
